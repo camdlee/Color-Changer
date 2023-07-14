@@ -11,8 +11,15 @@ const color = document.querySelector('.color');
 // Click Me Button
 btn.addEventListener('click', ()=>{
     //get random number between 0 and 3
-    const randomNum = 2;
+    const randomNum = getRandomNum();
+    // console.log(randomNum);
+
     document.body.style.backgroundColor = colors[randomNum];
     color.textContent = colors[randomNum]
-    
 });
+
+
+// Functions
+const getRandomNum = () =>{
+    return Math.floor(Math.random() * colors.length);
+}
